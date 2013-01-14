@@ -1,6 +1,6 @@
 Package: teamspeak3-client
 Version: 3.0.9.2-0.1
-Architecture: amd64
+Architecture: XXXX
 Maintainer: Florian Dhomps (Dh0mp5eur) <dhomps.florian@gmail.com>
 Installed-Size: 
 Depends: 
