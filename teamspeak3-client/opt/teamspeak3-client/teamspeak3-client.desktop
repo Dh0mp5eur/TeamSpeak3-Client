@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Teamspeak 3
+Name[fr]=Teamspeak 3
+Exec=/usr/bin/teamspeak3-client
+Terminal=false
+Icon=/opt/teamspeak3-client/pluginsdk/docs/client_html/images/logo.png
+Categories=Network
+Comment=Teamspeak 3 Client
+Comment[fr]=Client Teamspeak 3
