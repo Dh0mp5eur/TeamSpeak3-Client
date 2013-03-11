@@ -26,3 +26,4 @@ fi
 
 # Add link in /usr/bin 
 ln -s /opt/teamspeak3-client/ts3client_runscript.sh /usr/bin/teamspeak3-client
+chmod -R o+w /opt/teamspeak3-client
