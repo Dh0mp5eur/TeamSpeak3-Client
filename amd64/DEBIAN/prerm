@@ -1,40 +1,5 @@
 #!/bin/bash
 DIR="TeamSpeak3-Client-linux_amd64"
-
 rm -f /usr/bin/teamspeak3-client
-
-action="$1"
-if [ "$2" = "in-favour" ]; then
-  # Treat conflict remove as an upgrade.
-  action="upgrade"
-fi
-# Don't clean-up just for an upgrade.`
-if [ "$action" = "upgrade" ] ; then
-  exit 0
-fi
-
-# Remove icons from the system icons
-XDG_ICON_RESOURCE="`which xdg-icon-resource 2> /dev/null`"
-if [ ! -x "$XDG_ICON_RESOURCE" ]; then
-  echo "Error: Could not find xdg-icon-resource" >&2
-  exit 1
-fi
-for icon in "/opt/$DIR/pluginsdk/docs/client_html/images/"logo.png; do
-  size="${icon##*/product_logo_}"
-  "$XDG_ICON_RESOURCE" uninstall --size "${size%.png}" "teamspeak3-client"
-done
-
-# Remove the entry from the system menu
-XDG_DESKTOP_MENU="`which xdg-desktop-menu 2> /dev/null`"
-UPDATE_MENUS="`which update-menus 2> /dev/null`"
-if [ ! -x "$XDG_DESKTOP_MENU" ]; then
-  echo "Error: Could not find xdg-desktop-menu" >&2
-  exit 1
-fi
-"$XDG_DESKTOP_MENU" uninstall /opt/$DIR/teamspeak3-client.desktop
-
-if [ -x "$UPDATE_MENUS" ]; then
-  update-menus
-fi
-
+update-menus
 rm -rf /opt/$DIR
