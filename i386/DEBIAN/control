@@ -1,5 +1,5 @@
 Package: teamspeak3-client
-Version: 3-1
+Version: 3.0.13.1-1
 Architecture: i386
 Maintainer: Florian Dhomps (Dh0mp5eur) <dhomps.florian@gmail.com>
 Installed-Size: 
@@ -7,7 +7,7 @@ Depends:
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/Dh0mp5eur/TeamSpeak3-Client
-Description: VoIP chat for online gaming (3.0.12)
+Description: VoIP chat for online gaming
  TeamSpeak is a quality, scalable application which enables people to speak
  with one another over the Internet. TeamSpeak consists of both client and
  server software. The server acts as a host to multiple client connections,
